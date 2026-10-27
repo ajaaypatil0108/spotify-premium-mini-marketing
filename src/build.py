@@ -233,6 +233,22 @@ h2{font-size:20px;break-after:avoid}
 footer{padding:6mm 0 10mm}
 """
 
+
+def og_card():
+    return f"""<!doctype html><html><head><meta charset="utf-8"><style>
+body{{margin:0;width:1200px;height:627px;background:linear-gradient(135deg,#1f5f3a 0%,#163d27 40%,#121212 100%);color:#fff;font-family:Inter,sans-serif;display:flex;flex-direction:column;justify-content:center;padding:0 80px;box-sizing:border-box}}
+.brand{{display:flex;align-items:center;gap:16px;color:#b3b3b3;font-weight:700;font-size:22px;letter-spacing:.04em;text-transform:uppercase}}
+h1{{font-size:68px;line-height:1.05;margin:28px 0 18px;letter-spacing:-.02em}}
+p{{font-size:26px;color:#d0d0d0;margin:0 0 40px}}
+.k{{display:flex;gap:18px}} .k div{{background:rgba(24,24,24,.85);border-radius:14px;padding:18px 26px}}
+.k b{{display:block;color:{G};font-size:36px}} .k span{{color:#b3b3b3;font-size:18px}}
+</style></head><body>
+<div class="brand">{LOGO.replace('width="40" height="40"','width="56" height="56"')}<span>Case study · Ajay Patil</span></div>
+<h1>Growing Spotify Premium Mini in India</h1>
+<p>Performance marketing plan: audience, budget, timeline and funnel estimate</p>
+<div class="k"><div><b>₹50L</b><span>Illustrative budget</span></div><div><b>14 weeks</b><span>Campaign</span></div><div><b>{n(b['buyers'])}</b><span>New payers, base case</span></div></div>
+</body></html>"""
+
 def page(printing=False):
     toc = "".join(f'<a href="#{i}">{t.split(" · ")[1]}</a>' for i, t, _ in SECTIONS)
     body = "".join(f'<section id="{i}"><h2>{t}</h2>{c}</section>' for i, t, c in SECTIONS)
@@ -242,6 +258,10 @@ def page(printing=False):
     return f"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>Premium Mini Growth Plan — Ajay Patil</title><meta name="description" content="{desc}">
 <meta property="og:title" content="Performance Marketing Strategy: Spotify Premium Mini (India)"><meta property="og:description" content="{desc}">
+<meta property="og:type" content="website"><meta property="og:url" content="https://ajaaypatil0108.github.io/REPO_NAME/">
+<meta property="og:image" content="https://ajaaypatil0108.github.io/REPO_NAME/og-image.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="627">
+<meta property="og:image:alt" content="Case study cover: Growing Spotify Premium Mini in India, by Ajay Patil">
+<meta name="twitter:card" content="summary_large_image"><meta name="author" content="Ajay Patil">
 {fonts}<style>{CSS}{PRINT_CSS if printing else ""}</style></head><body>
 <header class="hero"><div class="wrap">
 <div class="brand">{LOGO}<span>Case study · Performance marketing</span></div>
@@ -273,5 +293,8 @@ if __name__ == "__main__":
         br = p.chromium.launch(); pg = br.new_page()
         pg.goto("file://" + os.path.abspath("print.html")); pg.wait_for_timeout(300)
         pg.pdf(path="Spotify_Premium_Mini_Strategy.pdf", format="A4", print_background=True)
+        pg2 = br.new_page(viewport={"width": 1200, "height": 627})
+        pg2.set_content(og_card()); pg2.wait_for_timeout(300)
+        pg2.screenshot(path="docs/og-image.png")
         br.close()
     print("built")
