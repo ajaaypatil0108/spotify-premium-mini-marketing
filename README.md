@@ -46,15 +46,11 @@ A performance marketing plan to turn free Spotify listeners in India into first-
 
 ```
 ├── Spotify_Premium_Mini_Strategy.pdf   # the case study
-├── docs/                               # GitHub Pages site (same content)
-│   ├── index.html
-│   └── Spotify_Premium_Mini_Strategy.pdf
-└── src/
-    ├── model.py    # budget split and funnel scenarios
-    └── build.py    # generates the site and the PDF
+└── docs/                               # GitHub Pages site (same content)
+    ├── index.html
+    ├── og-image.png                    # link preview image
+    └── Spotify_Premium_Mini_Strategy.pdf
 ```
-
-To rebuild: `pip install playwright && playwright install chromium`, then `python src/build.py spotify-premium-mini-marketing` from the repo root.
 
 ## Assumptions and sources
 
