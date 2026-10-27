@@ -4,7 +4,7 @@ A performance marketing plan to turn free Spotify listeners in India into first-
 
 **[View the case study site](https://ajaaypatil0108.github.io/spotify-premium-mini-marketing/)** · **[Download the PDF](Spotify_Premium_Mini_Strategy.pdf)**
 
-*Ajay Patil · Personal project · Feb 2024 · Revised Oct 2026*
+*Ajay Patil · Personal project · Aug 2024 · Revised Oct 2026*
 
 ---
 
@@ -12,7 +12,7 @@ A performance marketing plan to turn free Spotify listeners in India into first-
 
 | Section | What it covers |
 |---|---|
-| The product | Premium Mini at launch: ₹7/day or ₹25/week, ad-free, mobile only, up to 30 offline songs on one device |
+| The product | Premium Mini at launch: ₹7/day or ₹25/week, ad-free, mobile only, up to 30 offline songs per device |
 | Target audience | Students, occasion listeners, casual free users, mobile-first users in Tier 2–3 cities |
 | Goals and KPIs | Awareness, first purchase, repeat purchase and upgrade-to-monthly targets |
 | Channels and budget | ₹50 lakh illustrative budget split across seven channels |
@@ -32,9 +32,9 @@ A performance marketing plan to turn free Spotify listeners in India into first-
 | Gross revenue per new payer | ₹146.4 |
 | Break-even purchase rate on the plan page | ~14% (assumed: 8%) |
 
-**Main finding:** the weekly pass costs less per day than the monthly plan (₹3.57 vs ₹3.97). So the upgrade to monthly has to be sold on features (all devices, unlimited downloads, no weekly renewal), not on price. In the base case, paid media alone doesn't pay back within six months, so the plan leads with low-cost in-app and CRM channels and uses the launch weeks as a test.
+**Main finding:** the weekly pass costs less per day than the monthly plan (₹3.57 vs ₹3.97). So the upgrade to monthly has to be sold on features (desktop and web access, up to 10,000 downloads per device vs. 30), not on price. In the base case, paid media alone doesn't pay back on the revenue assumed, so the plan leans on low-cost in-app and CRM channels and uses the launch weeks as a test.
 
-## What changed from the Feb 2024 draft
+## What changed from the Aug 2024 draft
 
 - Added a real channel and budget section; the original section repeated the product overview.
 - Replaced the unsupported "up to 3X users" claim with a funnel estimate that shows its assumptions.
